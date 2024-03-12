@@ -2,10 +2,10 @@
 
 namespace App\Livewire\Forms;
 
+use App\Models\User;
+use Livewire\Attributes\Rule;
 use Livewire\Attributes\Validate;
 use Livewire\Form;
-use \Livewire\Attributes\Rule;
-use App\Models\User;
 
 class PostForm extends Form
 {

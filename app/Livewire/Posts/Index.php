@@ -2,8 +2,8 @@
 
 namespace App\Livewire\Posts;
 
-use Livewire\Component;
 use Livewire\Attributes\Title;
+use Livewire\Component;
 
 #[Title('Posts')]
 

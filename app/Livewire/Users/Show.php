@@ -2,9 +2,8 @@
 
 namespace App\Livewire\Users;
 
-use Livewire\Component;
-
 use App\Models\User;
+use Livewire\Component;
 
 class Show extends Component
 {
@@ -14,6 +13,7 @@ class Show extends Component
     {
         $this->user = User::findOrFail($user);
     }
+
     public function render()
     {
         // dd($this->user);

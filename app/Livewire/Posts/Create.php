@@ -3,7 +3,6 @@
 namespace App\Livewire\Posts;
 
 use Livewire\Component;
-use App\Models\Post;
 
 class Create extends Component
 {
@@ -13,6 +12,7 @@ class Create extends Component
     {
         $this->form->store();
     }
+
     public function render()
     {
         return view('livewire.posts.create');
