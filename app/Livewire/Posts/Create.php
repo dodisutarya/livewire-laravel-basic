@@ -3,14 +3,17 @@
 namespace App\Livewire\Posts;
 
 use Livewire\Component;
+use \App\Livewire\Forms\PostForm;
 
 class Create extends Component
 {
-    public \App\Livewire\Forms\PostForm $form;
+    public PostForm $form;
 
     public function save(): void
     {
-        $this->form->store();
+        $post = $this->form->store();
+
+        $this->dispatch('postCreated', $post->id);
     }
 
     public function render()

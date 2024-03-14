@@ -9,8 +9,17 @@ use Livewire\Component;
 
 class Index extends Component
 {
+    #[\Livewire\Attributes\On('postCreated')]
+
+    public function updateList($post)
+    {
+    }
+
     public function render()
     {
-        return view('livewire.posts.index');
+        $posts = \App\Models\Post::query()->with('user')->latest()->get();
+        return view('livewire.posts.index', [
+            'posts' => $posts,
+        ]);
     }
 }
