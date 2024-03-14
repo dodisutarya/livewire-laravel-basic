@@ -1,3 +1,10 @@
-<div>
-    {{-- To attain knowledge, add things every day; To attain wisdom, subtract things every day. --}}
+<div class="row">
+    <div class="col-md-6">
+        <livewire:posts.create />
+    </div>
+
+    <div class="col-md-6">
+        <livewire:posts.index :lazy="true" />
+    </div>
+
 </div>
