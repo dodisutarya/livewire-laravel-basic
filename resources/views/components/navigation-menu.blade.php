@@ -12,6 +12,7 @@
 
                 <x-nav-link :active="request()->routeIs('home')" href="{{ route('home') }}">Home</x-nav-link>
                 <x-nav-link :active="request()->routeIs('timeline')" href="/timeline">Timeline</x-nav-link>
+                <x-nav-link :active="request()->routeIs('users')" href="/users">Users</x-nav-link>
 
             </ul>
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -19,7 +20,7 @@
                 @auth
                     <form action="{{ route('logout') }}" method="post">
                         @csrf
-                        <button class="btn btn-primary" type="submit">
+                        <button class="btn nav-link" type="submit">
                             Log Out
                         </button>
                     </form>
